@@ -55,14 +55,12 @@ module.exports = function (config) {
       noInfo: true //please don't spam the console when running in karma!
     },
 
-    /*    plugins: [
-     'karma-webpack',
-     'karma-jasmine',
-     'karma-sourcemap-loader',
-     'karma-chrome-launcher',
-     'karma-phantomjs-launcher'
-     ],*/
-
+    // plugins: [
+    //   'karma-webpack',
+    //   'karma-sourcemap-loader',
+    //   'karma-chrome-launcher',
+    //   'karma-phantomjs-launcher'
+    // ],
 
     babelPreprocessor: {
       options: {
