@@ -1,9 +1,9 @@
 var path = require('path');
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
     basePath: '',
-    frameworks: ['mocha'],
+    frameworks: ['mocha', 'sinon-chai'],
     files: [
       'test/**/*.js'
     ],
@@ -18,7 +18,10 @@ module.exports = function(config) {
 
         // custom ui, defined in required file above
         ui: 'bdd-lazy-var/global',
-      }
+      },
+      chai: {
+        includeStack: true,
+      },
     },
 
     preprocessors: {
@@ -52,13 +55,13 @@ module.exports = function(config) {
       noInfo: true //please don't spam the console when running in karma!
     },
 
-/*    plugins: [
-      'karma-webpack',
-      'karma-jasmine',
-      'karma-sourcemap-loader',
-      'karma-chrome-launcher',
-      'karma-phantomjs-launcher'
-    ],*/
+    /*    plugins: [
+     'karma-webpack',
+     'karma-jasmine',
+     'karma-sourcemap-loader',
+     'karma-chrome-launcher',
+     'karma-phantomjs-launcher'
+     ],*/
 
 
     babelPreprocessor: {
