@@ -5,7 +5,7 @@ module.exports = function (config) {
     basePath: '',
     frameworks: ['mocha', 'sinon-chai'],
     files: [
-      'test/**/*.test.js'
+      'test/**/*.test.js',
     ],
 
     client: {
@@ -27,7 +27,7 @@ module.exports = function (config) {
     preprocessors: {
       // add webpack as preprocessor
       'src/**/*.js': ['webpack', 'sourcemap'],
-      'test/**/*.test.js': ['webpack', 'sourcemap']
+      'test/**/*.test.js': ['webpack', 'sourcemap'],
     },
 
     webpack: { //kind of a copy of your webpack config
@@ -39,20 +39,20 @@ module.exports = function (config) {
             loader: 'babel-loader',
             exclude: path.resolve(__dirname, 'node_modules'),
             query: {
-              presets: ['airbnb']
-            }
+              presets: ['airbnb'],
+            },
           },
-        ]
+        ],
       },
       externals: {
         'react/addons': true,
         'react/lib/ExecutionEnvironment': true,
         'react/lib/ReactContext': true,
-      }
+      },
     },
 
     webpackServer: {
-      noInfo: true //please don't spam the console when running in karma!
+      noInfo: true, //please don't spam the console when running in karma!
     },
 
     // plugins: [
@@ -64,8 +64,12 @@ module.exports = function (config) {
 
     babelPreprocessor: {
       options: {
-        presets: ['airbnb']
-      }
+        presets: ['airbnb',
+           {
+          debug: false,
+        },
+        ],
+      },
     },
     reporters: ['progress'],
     port: 9876,
@@ -74,5 +78,5 @@ module.exports = function (config) {
     autoWatch: true,
     browsers: ['Chrome'],
     singleRun: false,
-  })
+  });
 };
