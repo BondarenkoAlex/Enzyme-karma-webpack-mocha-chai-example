@@ -29,7 +29,7 @@
     "webpack": "^3.0.0"
   },
   "scripts": {
-    "test": "karma start --no-auto-watch --single-run --browsers PhantomJS",
+    "test": "./node_modules/karma/bin/karma start --no-auto-watch --single-run --browsers PhantomJS",
     "test:chrome": "./node_modules/karma/bin/karma start"
   },
   "repository": "git+https://github.com/BondarenkoAlex/Enzyme-karma-webpack-mocha-chai-example.git",
