@@ -5,7 +5,7 @@ module.exports = function (config) {
     basePath: '',
     frameworks: ['mocha', 'sinon-chai'],
     files: [
-      'test/**/*.js'
+      'test/**/*.test.js'
     ],
 
     client: {
@@ -27,7 +27,7 @@ module.exports = function (config) {
     preprocessors: {
       // add webpack as preprocessor
       'src/**/*.js': ['webpack', 'sourcemap'],
-      'test/**/*.js': ['webpack', 'sourcemap']
+      'test/**/*.test.js': ['webpack', 'sourcemap']
     },
 
     webpack: { //kind of a copy of your webpack config
