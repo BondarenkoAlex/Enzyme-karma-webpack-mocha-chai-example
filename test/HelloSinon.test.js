@@ -1,9 +1,9 @@
 import chai from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
+import { helloSinon } from '../src/HelloSinon';
 chai.should();
 chai.use(sinonChai);
-import { helloSinon } from '../src/HelloSinon';
 
 describe('hello sinon', function () {
   it('should call callback with correct greeting', function () {
